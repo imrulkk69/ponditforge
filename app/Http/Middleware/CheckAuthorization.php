@@ -17,9 +17,11 @@ class CheckAuthorization
     {
         $actionName = $request->route()->getActionName();
         $method = $request->route()->methods()[0];
-        $action = substr($actionName, strpos($actionName, '@') + 1);
+        $action = substr($actionName, strpos($actionName, '@') + 1); // PostController@index -> index
         $namespace = substr($actionName, 0, strrpos($actionName, '\\'));
         $controller = substr($actionName, strrpos($actionName, '\\') + 1, -(strlen($action) + 1));
+
+        dd($actionName);
 
         if ($request->user()->isAdmin() || $request->user()->isAuthorize($namespace, $controller, $method, $action)) {
             return $next($request);

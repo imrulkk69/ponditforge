@@ -51,7 +51,7 @@
                     <li>
                         <div class="post-image">
                             <a href="#">
-                                <img src="img/Post_Image_5_thumb.jpg" />
+                                <img src="{{asset('img/Post_Image_5_thumb.jpg')}}" />
                             </a>
                         </div>
                         <div class="post-body">
@@ -64,7 +64,7 @@
                     <li>
                         <div class="post-image">
                             <a href="#">
-                                <img src="img/Post_Image_4_thumb.jpg" />
+                                <img src="{{asset('img/Post_Image_4_thumb.jpg')}}" />
                             </a>
                         </div>
                         <div class="post-body">
@@ -77,7 +77,7 @@
                     <li>
                         <div class="post-image">
                             <a href="#">
-                                <img src="img/Post_Image_3_thumb.jpg" />
+                                <img src="{{asset('img/Post_Image_3_thumb.jpg')}}" />
                             </a>
                         </div>
                         <div class="post-body">

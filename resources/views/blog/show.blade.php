@@ -8,7 +8,7 @@
                     <article class="post-item post-detail">
                         <div class="post-item-image">
                             <a href="#">
-                                <img src="img/Post_Image_1.jpg" alt="">
+                                <img src="{{asset('img/Post_Image_1.jpg')}}" alt="">
                             </a>
                         </div>
 
@@ -40,7 +40,7 @@
                         <div class="media">
                             <div class="media-left">
                                 <a href="#">
-                                    <img alt="Author 1" src="img/author.jpg" class="media-object">
+                                    <img alt="Author 1" src="{{asset('img/author.jpg')}}" class="media-object">
                                 </a>
                             </div>
                             <div class="media-body">

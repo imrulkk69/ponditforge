@@ -11,51 +11,23 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('blog.index');
-});
+    Route::get('/', function () {
+        return view('blog.index');
+    });
 
-Route::get('/post', function(){
-    return view('blog.show  ');
-});
-
-Route::get('/test', function(){
-    return view('blog.layouts.main');
-});*/
-
-Auth::routes();
-
-Route::middleware('authorize')->group(function() {
-
-    Route::get('/post','PostController@index');
-		
-});
-
-/*Route::group([
-
-		'prefix' => Config("authorization.route-prefix"),
-		'middleware' => ['web', 'auth']],
-
-		function(){
-			Route::group(['middleware' => Config("authorization.middleware")], function() {
-				Route::resource('users', 'UsersController', ['except' =>[
-						'create', 'store', 'show'
-					]]);
-				Route::resource('roles', 'RolesController');
-				Route::get('/permissions','PermissionController@index');
-				Route::post('/permissions','PermissionCOntroller@update');
-				Route::post('/permissions/getSelectedRoutes', 'PermissionsController@getSelectedRoutes');
-			});
-
-			Route::get('/',function(){
-				return view('vendor.authorize.welcome');
-			});			
-		});*/
+    /*Route::get('login', function (){
+        return 'Here to login';
+    });*/
 
 
+    Auth::routes();
 
+    Route::middleware('authorize')->group(function() {
 
+        Route::get('/post','PostController@index');
 
-/*Auth::routes();
+        Route::get('/blog/show  ',function(){
+            return view('blog.show');
+        });
+    });
 
-Route::get('/home', 'HomeController@index')->name('home');*/

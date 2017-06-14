@@ -11,13 +11,7 @@
 |
 */
 
-    Route::get('/', function () {
-        return view('blog.index');
-    });
-
-    /*Route::get('login', function (){
-        return 'Here to login';
-    });*/
+    Route::get('/', 'BlogController@index');
 
 
     Auth::routes();

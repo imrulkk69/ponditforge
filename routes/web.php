@@ -13,15 +13,15 @@
 
     Route::get('/', 'BlogController@index');
 
+    Route::get('/blog/show',function(){
+        return view('blog.show');
+    });
+
 
     Auth::routes();
 
     Route::middleware('authorize')->group(function() {
 
-        Route::get('/post','PostController@index');
 
-        Route::get('/blog/show  ',function(){
-            return view('blog.show');
-        });
     });
 
